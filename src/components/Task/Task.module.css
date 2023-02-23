@@ -19,6 +19,7 @@
   margin-right: auto;
 }
 
+
 .checkContainer {
   min-width: 1.125rem;
   height: 1.125rem;
@@ -32,3 +33,4 @@
   border: 2px solid var(--blue);
   border-radius: 50%;
 }
+

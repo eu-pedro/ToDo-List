@@ -8,6 +8,7 @@ interface PropsTask {
 
 
 export function Task({task}: PropsTask) {
+  
   return (
     <section className={styles.taskContainer}>
       <button className={styles.checkContainer}>

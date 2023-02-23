@@ -8,17 +8,22 @@ interface PropsSection {
 }
 
 export function Section({tasks}: PropsSection) {
+
+  const tasksLength = tasks.length;
+  const completedTasks = tasks.filter((task) => {
+    return task.isCompleted === true; 
+  })
   return (
     <section className={styles.tasks}>
       <header className={styles.header}>
         <div>
           <p className={styles.created}>Tarefas criadas</p>
-          <span>10</span>
+          <span>{tasksLength}</span>
         </div>
 
         <div>
           <p className={styles.completed}>Concluídas</p>
-          <span>2 de 10</span>
+          <span>{completedTasks.length} de {tasksLength}</span>
         </div>
       </header>
 
