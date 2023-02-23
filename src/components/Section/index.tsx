@@ -1,8 +1,13 @@
 import './Section.module.css';
 import styles from './Section.module.css';
 import { Task } from '../Task';
+import { Itask } from '../../App';
 
-export function Section() {
+interface PropsSection {
+  tasks: Itask[];
+}
+
+export function Section({tasks}: PropsSection) {
   return (
     <section className={styles.tasks}>
       <header className={styles.header}>
@@ -18,8 +23,12 @@ export function Section() {
       </header>
 
       <div className={styles.containerTasks}>
-        <Task />
-        <Task />
+        {tasks.map((task) => (
+          <Task
+            key={task.id}
+            task={task}
+          />
+        ))}
       </div>
     </section>
   );

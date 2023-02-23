@@ -1,8 +1,13 @@
 import { Trash } from 'phosphor-react';
+import { Itask } from '../../App';
 import styles from './Task.module.css';
 
+interface PropsTask {
+  task: Itask;
+}
 
-export function Task() {
+
+export function Task({task}: PropsTask) {
   return (
     <section className={styles.taskContainer}>
       <button className={styles.checkContainer}>
@@ -10,10 +15,10 @@ export function Task() {
       </button>
 
 
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A nobis, iure ipsa minima maxime atque.</p>
+      <p>{task.title}</p>
 
 
-     
+
       <Trash size={22} cursor="pointer"/>
       
     </section>
