@@ -4,7 +4,7 @@ import styles from './Header.module.css';
 import { PlusCircle } from 'phosphor-react';
 
 interface HeaderProps {
-  onAddTask: (title: string, verifyCompleted: boolean) => void
+  onAddTask: (title: string) => void
 }
 
 export function Header({ onAddTask }: HeaderProps) {
@@ -18,7 +18,7 @@ export function Header({ onAddTask }: HeaderProps) {
   function handleNewTask (e:FormEvent) {
     e.preventDefault();
     if(newTask === '') return;
-    onAddTask(newTask, false);
+    onAddTask(newTask);
     setNewTask('')
   }
 

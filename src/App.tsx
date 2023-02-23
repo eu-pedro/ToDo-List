@@ -18,15 +18,24 @@ export function App() {
   ])
 
 
-  function addTask (title:string, verifyCompleted:boolean) {
+  function addTask (title:string) {
     setTasks([
       ...tasks,
       {
         id: uuidv4(),
         title: title,
-        isCompleted: verifyCompleted
+        isCompleted: false
       }
     ])
+  }
+
+  function deleteTask (id: string) { 
+    const tasksForDelete = tasks.filter((task) => {
+      // se for true => é diferente, logo mantém.
+      // se for false => é igual, logo remove.
+      return task.id !== id;
+    })
+    setTasks(tasksForDelete)
   }
 
   return (
@@ -36,6 +45,7 @@ export function App() {
       />
       <Section
         tasks={tasks}
+        onDeleteTask={deleteTask}
       />
     </>
   )

@@ -5,9 +5,10 @@ import { Itask } from '../../App';
 
 interface PropsSection {
   tasks: Itask[];
+  onDeleteTask: (id: string) => void
 }
 
-export function Section({tasks}: PropsSection) {
+export function Section({tasks, onDeleteTask}: PropsSection) {
 
   const tasksLength = tasks.length;
   const completedTasks = tasks.filter((task) => {
@@ -32,6 +33,7 @@ export function Section({tasks}: PropsSection) {
           <Task
             key={task.id}
             task={task}
+            onDeleteTask={onDeleteTask}
           />
         ))}
       </div>
