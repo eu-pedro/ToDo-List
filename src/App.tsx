@@ -38,6 +38,21 @@ export function App() {
     setTasks(tasksForDelete)
   }
 
+  function changeIsCompleted (taskId: string) {
+    const alternateIsCompleted = tasks.map((task) => {
+      if(task.id === taskId){
+        return {
+          ...task,
+          isCompleted: !task.isCompleted
+        }
+      }
+      else {
+        return task;
+      }
+    })
+    setTasks(alternateIsCompleted)
+  }
+
   return (
     <>
       <Header
@@ -46,6 +61,7 @@ export function App() {
       <Section
         tasks={tasks}
         onDeleteTask={deleteTask}
+        onChangeIsCompleted={changeIsCompleted}
       />
     </>
   )

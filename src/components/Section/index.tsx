@@ -6,9 +6,10 @@ import { Itask } from '../../App';
 interface PropsSection {
   tasks: Itask[];
   onDeleteTask: (id: string) => void
+  onChangeIsCompleted: (id: string) => void
 }
 
-export function Section({tasks, onDeleteTask}: PropsSection) {
+export function Section({tasks, onDeleteTask, onChangeIsCompleted}: PropsSection) {
 
   const tasksLength = tasks.length;
   const completedTasks = tasks.filter((task) => {
@@ -34,6 +35,7 @@ export function Section({tasks, onDeleteTask}: PropsSection) {
             key={task.id}
             task={task}
             onDeleteTask={onDeleteTask}
+            onChangeIsCompleted={onChangeIsCompleted}
           />
         ))}
       </div>
