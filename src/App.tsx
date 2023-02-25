@@ -25,6 +25,8 @@ export function App() {
     ])
   }
 
+  
+
   function deleteTask (id: string) { 
     const tasksForDelete = tasks.filter((task) => {
       // se for true => é diferente, logo mantém.
