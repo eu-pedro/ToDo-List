@@ -2,7 +2,7 @@
 
 Uma aplicação web com intuito de gerenciar suas atividades do dia a dia e melhorar seu desempenho.
 
-## 📷 Fotos do Projeto
+## 📷 Imagens do Projeto
 
 Home
 
