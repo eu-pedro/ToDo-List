@@ -41,6 +41,43 @@
   height: 100%;
 }
 
-.iconeTrash:hover{
+.iconeTrash:hover {
   color: var(--danger);
+}
+
+.alert {
+  color: var(--purple);
+}
+
+.paragraph {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+  color: var(--gray-100);
+  padding: 1.5rem 0;
+}
+
+.containerButton {
+  display: flex;
+  justify-content: flex-end;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.2rem 0;
+}
+
+.containerButton button {
+  padding: 0.8rem;
+  background-color: var(--danger);
+  border-radius: 8px;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.containerButton button:hover {
+  opacity: 0.7;
 }

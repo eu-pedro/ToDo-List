@@ -11,11 +11,7 @@ export interface Itask {
 
 export function App() {
 
-  const [tasks, setTasks] = useState<Itask[]>([
-    {id: uuidv4(), title: 'test', isCompleted: true},
-    {id: uuidv4(), title: 'segunda', isCompleted: false},
-    {id: uuidv4(), title: 'segunda', isCompleted: false}
-  ])
+  const [tasks, setTasks] = useState<Itask[]>([])
 
 
   function addTask (title:string) {
